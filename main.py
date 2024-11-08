@@ -18,7 +18,7 @@ def enter():
         return enter()
 
     to_base = input("In which base you want to convert your little number?: ")
-    while not to_base.isdigit() or int(to_base) < 2 or int(to_base) > 161:
+    while not to_base.isdigit() or int(to_base) < 2 or int(to_base) > 16:
         print("Wrong base try again!")
         return enter()
     return from_dec(to_dec(n, base), int(to_base))
