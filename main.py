@@ -24,12 +24,11 @@ def enter():
     return from_dec(to_dec(n, base), int(to_base))
 
 def from_dec(n, base):
-    a = '0123456789ABCDEF'
-    binary = ''
+    not_dec = ''
     while n != 0:
-        binary = a[n % base] + binary
+        not_dec = '0123456789ABCDEF'[n % base] + not_dec
         n = n // base
-    return binary if binary else 0
+    return not_dec if not_dec else 0
 
 def to_dec(n, base):
     return sum(int(base)**x * '0123456789ABCDEF'.find(y) for x, y in enumerate(reversed(n)))
