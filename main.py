@@ -13,7 +13,7 @@ def enter():
         case _:
             n, base = i.split('x') if 'x' in i else (i, '10')
 
-    while any(x not in '0123456789ABCDEF' or '0123456789ABCDEF'.find(x) >= int(base) for x in n):
+    while any(x not in '0123456789ABCDEF'[0:int(base)] for x in n):
         print("Wrong input try again!")
         return enter()
 
