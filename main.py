@@ -17,7 +17,7 @@ def enter():
         print("Wrong input try again!")
         return enter()
 
-    to_base = input("In which base you want to convert your little number?: ")
+    to_base = input("To which base you want to convert your little number? (2 <= number <= 16): ")
     while not to_base.isdigit() or int(to_base) < 2 or int(to_base) > 16:
         print("Wrong base try again!")
         return enter()
@@ -36,6 +36,6 @@ def to_dec(n, base):
 
 
 while True:
-    print("Your little number but different:", enter())
+    print("Your little number but in another base:", enter())
     if input("Another one? (y/n): ") != 'y':
         break
